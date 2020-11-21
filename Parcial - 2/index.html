@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parcial 2</title>
+    <script src="./js/vehiculo.js"></script>
+    <script src="./js/camioneta.js"></script>
+    <script src="./js/auto.js"></script>
+    <script src="./js/funciones.js"></script>
+    <link rel="stylesheet" href="./css/style.css"></link>
+</head>
+<body>
+    
+    <input id="nuevoVehiculo" type="button" value="ALTA">
+    
+    
+    <div class="agregar" id="filtros" >
+        <h3 id="titulo" class="titulo"></h3>
+        
+
+        <label id="labelNombre" for="selectTipoVehiculoFilter">Filtrar por:</label>
+        <select name="selFilter" id="selectTipoVehiculoFilter">
+            <option value="camioneta">Camioneta</option> 
+            <option value="auto">Auto</option>
+        </select>
+
+
+    </div>
+
+    <div class="agregar" id="containerNewVehiculo" hidden>
+        <h3 id="titulo" class="titulo"></h3>
+        
+
+        <label id="labelNombre" for="inId">Id:</label>
+        <input type="text" id="inId" name="inId" disabled>
+
+        <label id="labelMarca" for="inMarca">Marca:</label>
+        <input type="text" id="inMarca" name="inMarca">
+
+        <label id="labelModelo" for="inModelo">Modelo:</label>
+        <input type="text" id="inModelo" name="inModelo">
+
+        <label id="labelPrecio" for="inPrecio">Precio:</label>
+        <input type="text" id="inPrecio" name="inPrecio">
+
+        <label id="labelPuertas" for="inCantPuertas" hidden>Cant. Puertas:</label>
+        <input type="text" id="inCantPuertas" name="inCantPuertas" hidden>
+
+        <label id="label4x4" for="in4x4" hidden>4x4:</label>
+        <input type="text" id="in4x4" name="in4x4" hidden>
+
+        <select name="select" id="selectTipoVehiculo">
+            <option value="camioneta">Camioneta</option> 
+            <option value="auto">Auto</option>
+        </select>
+
+        <input type="button" id="btnAgregar" class="btnAgregar" value="Agregar a la lista">
+    </div>
+
+    <table class="tablaGral" id="tablaGral">
+        <h3 class="h3tablaGral" id="h3tablaGral" >Lista Vehiculos</h3>
+        <thead>
+            <tr>
+                <th>ID</th> 
+                <th>MARCA</th>
+                <th>MODELO</th>
+                <th>PRECIO</th>
+                <th>ACCION</th>
+            </tr>
+        </thead>
+        <tbody id="tcuerpoGral">
+            
+        </tbody>
+        <tfoot>
+
+
+        </tfoot>
+
+    </table>
+
+    <table class="tablaFiltrada" id="tablaFiltrada" hidden>
+        <h3 class="h3ListaFiltrada" id="h3ListaFiltrada" hidden>Lista Filtrada</h3>
+        <thead>
+            <tr>
+                <th>ID</th> 
+                <th>MARCA</th>
+                <th>MODELO</th>
+                <th>PRECIO</th>
+                <th>ACCION</th>
+            </tr>
+        </thead>
+        <tbody id="tcuerpoFiltrado">
+            
+            
+
+        </tbody>
+        <tfoot>
+
+
+        </tfoot>
+
+    </table>
+</body>
+</html>
